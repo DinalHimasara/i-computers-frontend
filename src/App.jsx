@@ -2,19 +2,39 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import ProductCard from './components/productCard'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import HomePage from './Pages/Home'
+import LoginPage from './Pages/Login'
+import RegisterPage from './Pages/register'
+import AdminPage from './Pages/admin'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     
-  <>
-    <ProductCard name ="Phone" image="https://picsum.photos/id/3/200/300" price= "42,000.00"/>
-    <ProductCard name ="laptop" image="https://picsum.photos/id/0/200/300" price= "1000,000.00"/>
-    <ProductCard name ="Watch" image="https://picsum.photos/id/5/200/300" price= "10,000"/>
+    <BrowserRouter>
+      <div className='w-full h-screen'>
 
-  </>
+      {/* Routing the paths */}
+      
+        <Routes path="/">
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/login' element={<LoginPage/>}/>
+          <Route path='/register' element={<RegisterPage/>}/>
+          <Route path='/admin' element={<AdminPage/>}/>
+        </Routes>
+
+
+
+      </div>
+
+
+
+    </BrowserRouter>
+     
+  
+   
 )
 
 
