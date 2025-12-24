@@ -7,6 +7,7 @@ import HomePage from './Pages/Home'
 import LoginPage from './Pages/Login'
 import RegisterPage from './Pages/register'
 import AdminPage from './Pages/admin'
+import NotFound from './Pages/404'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,15 +15,15 @@ function App() {
   return (
     
     <BrowserRouter>
-      <div className='w-full h-screen'>
+      <div className='w-full h-screen bg-primary'>
 
       {/* Routing the paths */}
-      
+
         <Routes path="/">
-          <Route path='/' element={<HomePage/>}/>
+          <Route path='/*' element={<HomePage/>}/>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path='/register' element={<RegisterPage/>}/>
-          <Route path='/admin' element={<AdminPage/>}/>
+          <Route path='/admin/*' element={<AdminPage/>}/>
         </Routes>
 
 
