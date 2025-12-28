@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import "tailwindcss";
+
 
 
 
@@ -6,6 +9,7 @@
     --color-primary: #F1F1F1;
     --color-secondary: #000000;
     --color-accent: #2733A0;
+    --font-lora: "Lora", sans-serif;
 }
 
 /* Customize the entire scrollbar */
